@@ -234,7 +234,7 @@ async def run_attacks(
     save_json: bool = True,
     output_path: str | Path | None = None,
 ):
-    """Run adversarial prompts against the agent and collect results.
+    """Run adversarial prompts against the agent and collect results..
 
     When save_json=True (default), writes under outputs/:
       unsafe → outputs/unsafe_attack_result.json
