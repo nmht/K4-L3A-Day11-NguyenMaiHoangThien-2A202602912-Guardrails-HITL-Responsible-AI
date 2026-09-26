@@ -58,16 +58,16 @@ def detect_injection(user_input: str) -> InputStatus:
     cleaned_input = unicodedata.normalize("NFKC", cleaned_input)
 
     INJECTION_PATTERNS = [
-        r"ignore\s+(?:all\s+)?(?:previous|above|prior)\s+instructions",
+        r"ignore\s+(?:all\s+)?(?:previous|above|prior)\s+(?:instructions|rules|prompts)",
         r"you\s+are\s+now",
         r"system\s+prompt",
         r"reveal\s+(?:your\s+|the\s+)?(?:instructions|prompt|system\s+prompt)",
         r"pretend\s+(?:you\s+are|to\s+be)",
         r"act\s+as\s+(?:a\s+|an\s+)?unrestricted",
-        r"disregard\s+(?:all\s+)?(?:previous|above|prior)\s+instructions",
-        r"forget\s+(?:all\s+)?(?:previous|above|prior)\s+instructions",
-        r"override\s+(?:system|safety|guardrails|instructions)",
-        r"bypass\s+(?:all\s+)?(?:guardrails|safety|security|instructions)",
+        r"disregard\s+(?:all\s+)?(?:previous|above|prior)\s+(?:instructions|rules|prompts)",
+        r"forget\s+(?:all\s+)?(?:previous|above|prior)\s+(?:instructions|rules|prompts)",
+        r"override\s+(?:system|safety|guardrails|instructions|rules)",
+        r"bypass\s+(?:all\s+)?(?:guardrails|safety|security|instructions|rules)",
         r"jailbreak",
         r"developer\s+mode",
     ]
